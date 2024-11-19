@@ -25,7 +25,7 @@ def get_Pois(city, x, y):
             'y': poi['y'],
             'category': poi['category'],
             'POI_count': poi['POI_count'],
-            'distance': round((distance/2), 2)  #covert to km
+            'distance': round((distance/2), 2)  #convert to km
         })
 
     POI_list = sorted(POI_list, key=lambda k: k['distance'])
