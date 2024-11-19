@@ -20,14 +20,14 @@ const POIList = ({ suggestions = [], onClose, onClick }) => {
   return (
     <div className="poi-list-container">
       <div className="poi-list" ref={poiListRef}>
-        <h2>🌎Popular spots near you🌎</h2>
+        <h2>Recommended POIs For You</h2>
         {suggestions.length > 0 ? (
           <ul>
             {suggestions.map((poi, index) => (
               <li key={index} onClick={() => onClick(poi)}>
-                <p>🏷️{poi.category}</p>
-                <p>🚗{poi.distance} km away</p>
-                <p>📍Coordinates: ({poi.x}, {poi.y})</p>
+                <p>Place of Interest:{poi.category}</p>
+                <p>Distance:{poi.distance} km away</p>
+                <p>Coordinates:({poi.x}, {poi.y})</p>
               </li>
             ))}
           </ul>

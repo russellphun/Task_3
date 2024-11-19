@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color:cadetblue;
+  background-color:rgb(255, 244, 141);
 }
 
 .city-boxes {
@@ -21,7 +21,7 @@
 .city-box {
   width: 100px;
   height: 100px;
-  background-color: rgb(179, 228, 227);
+  background-color: rgb(226, 179, 228);
   display: flex;
   align-items: center;
   justify-content: center;

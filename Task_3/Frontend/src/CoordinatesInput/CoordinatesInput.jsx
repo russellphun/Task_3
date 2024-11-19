@@ -41,12 +41,11 @@ const CoordinatesInput = ({ onSubmit, onCancel }) => {
         </div>
         {error && <div className='error'>{error}</div>}
         <div className='buttons'>
-          <button type="submit">Submit</button>
-          <button type="button" onClick={onCancel}>Cancel</button>
+          <button type="submit">Enter</button>
+          <button type="button" onClick={onCancel}>Go Back</button>
         </div>
       </form>
     </div>
   );
 };
-
 export default CoordinatesInput;

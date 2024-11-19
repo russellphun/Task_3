@@ -4,7 +4,7 @@ import './History.css';
 const History = ({ locationHistory }) => {
   return (
     <div className="history-container">
-      <h2>Your visited locations</h2>
+      <h2>Past Locations</h2>
       <ul>
         {locationHistory.map((location, index) => (
           <li key={index}>
@@ -16,5 +16,4 @@ const History = ({ locationHistory }) => {
     </div>
   );
 };
-
 export default History;

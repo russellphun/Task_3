@@ -127,7 +127,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Current Location: City: {city} , Longitude: {coordinates.x} Latitude: {coordinates.y}</h1>
+        <h1>Selected City:City:{city},Longitude:{coordinates.x},Latitude:{coordinates.y}</h1>
       </div>
       {showConfirmation ? (
         <div className="modal-overlay">
@@ -158,12 +158,11 @@ function App() {
 
       <MapFrame currentX={coordinates.x} currentY={coordinates.y} />
       <div className="app-buttons">
-        <button onClick={clickSetLocation}>Set Location</button>
-        <button onClick={() => setShowLocationHistory(true)}>Location History</button>
-        <button onClick={getNextLocation}>Next Locations Suggestions</button>
+        <button onClick={clickSetLocation}>Enter Location</button>
+        <button onClick={() => setShowLocationHistory(true)}>Past Locations</button>
+        <button onClick={getNextLocation}>Recommend POIs</button>
       </div>
     </div>
   );
 }
-
 export default App;
