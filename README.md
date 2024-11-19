@@ -6,20 +6,6 @@
 
 **How App Works** - User can select 1 out of 4 cities (A,B,C,D) - User then sets their current location on map of selected city (set with X/Y Coordinates) - App keeps track of User's past history of POI visited in selected city - App recommends the next best POI for User to go, based on User's profile and history
 
-
-
-### Main UI
-![Main UI](./README_Screenshots/Main.png)
-
-### Coordinate Box
-![Coordinate Box](./README_Screenshots/Coordinates_Input.png)
-
-### Location History
-![Location History](./README_Screenshots/History.png)
-
-### Suggestion List
-![Suggestion List](./README_Screenshots/Suggestions.png)
-
 **App's Structure** - Frontend - Developed using React; - Backend - Developed using Flask
 
 **Requirements to Run App** - Node.js installed; Flask installed
