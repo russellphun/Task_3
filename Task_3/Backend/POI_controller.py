@@ -1,8 +1,5 @@
 import pandas as pd
-
 from utils import calculate_displacement
-
-
 def load_city_poi(city):
     city_file_path = f'./POIs/City{city}.csv'
     try:
@@ -25,12 +22,11 @@ def get_Pois(city, x, y):
             'y': poi['y'],
             'category': poi['category'],
             'POI_count': poi['POI_count'],
-            'distance': round((distance/2), 2)  #convert to km
+            'distance': round((distance/2), 2)
         })
 
     POI_list = sorted(POI_list, key=lambda k: k['distance'])
     return POI_list[:10]
-
 
 def get_all_POIs(city):
     city_poi_df = load_city_poi(city)

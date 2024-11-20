@@ -1,14 +1,11 @@
 import torch
 import numpy as np
 from utils import calculate_displacement
-
 import pandas as pd
 import numpy as np 
 import torch
 import torch.nn as nn
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence, pad_sequence
-
-# Load the model 
 
 class LSTMModel(nn.Module):
     def __init__(self, input_size=2, hidden_size=64, output_size=2):
@@ -22,14 +19,11 @@ class LSTMModel(nn.Module):
         unpacked_output, _ = pad_packed_sequence(packed_output, batch_first=True)
         out = self.fc(hn[-1])
         return out
-    
-    
+        
 def make_multiple_predictions(input_sequence, num_predictions, city):
 
     city = city.upper()
-
     print(input_sequence)
-    # Convert input_sequence to a list of tuples
     input_sequence = [(coord['x'], coord['y']) for coord in input_sequence]
 
     input_tensor = torch.tensor(input_sequence).unsqueeze(0).float() 
