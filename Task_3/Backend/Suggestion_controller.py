@@ -67,7 +67,6 @@ def get_categories(city, coordinates):
             return category.iloc[0]
     return None
     
-
 def get_suggestions(history , city):
 
     predictions = make_multiple_predictions(history, 5, city)

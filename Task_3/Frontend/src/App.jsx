@@ -7,7 +7,6 @@ import History from './History/History.jsx';
 import './App.css';
 
 function App() {
-  // Confirmation box
   const [message, setMessage] = useState('Confirm action?');
   const [confirmAction, setConfirmAction] = useState(() => () => {});
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -16,11 +15,8 @@ function App() {
     setConfirmAction(() => () => {});
     setShowConfirmation(false);
   };
-
-  // Set City
   const [city, setCity] = useState('A');
 
-  // Location History
   const [locationHistory, setLocationHistory] = useState([]);
   const [showLocationHistory, setShowLocationHistory] = useState(false);
   const historyRef = useRef(null);
@@ -34,14 +30,13 @@ function App() {
         setCity(temp);
         setCoordinates({ x: 100, y: 100 });
        
-        setLocationHistory([]); // Clear location history when moving to a new city
+        setLocationHistory([]);
         setShowConfirmation(false);
       });
       setShowConfirmation(true);
     }
   };
 
-  // Coordinates
   const [coordinates, setCoordinates] = useState({ x: 100, y: 100 });
   const [showCoordinatesInput, setShowCoordinatesInput] = useState(false);
 
@@ -51,12 +46,10 @@ function App() {
 
   const handleSetCoordinates = (x, y) => {
     setCoordinates({ x, y });
-    setLocationHistory(prevHistory => [...prevHistory, { x, y }]); // Update location history
+    setLocationHistory(prevHistory => [...prevHistory, { x, y }]);
     setShowCoordinatesInput(false);
   };
 
-
-  // Suggestions
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
@@ -110,7 +103,6 @@ function App() {
     setShowConfirmation(true);
   };
 
-  // Handle click outside to close location history
   const handleClickOutside = (event) => {
     if (historyRef.current && !historyRef.current.contains(event.target)) {
       setShowLocationHistory(false);

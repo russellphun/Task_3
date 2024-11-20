@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import './POIList.css';
-
 const POIList = ({ suggestions = [], onClose, onClick }) => {
   const poiListRef = useRef(null);
 

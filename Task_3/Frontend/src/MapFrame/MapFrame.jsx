@@ -75,7 +75,6 @@ const MapFrame = ({ currentX, currentY }) => {
   }, [handleMouseMove]);
 
   useEffect(() => {
-    // Center the current location
     const containerWidth = mapRef.current.clientWidth;
     const containerHeight = mapRef.current.clientHeight;
     setOffsetX(containerWidth / 2 - Math.floor((currentX - 1) / 2) * 40 - 20);
