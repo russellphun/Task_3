@@ -69,22 +69,7 @@ def get_categories(city, coordinates):
     
 
 def get_suggestions(history , city):
-    """
-    Load model based on city
-    Get suggestions based on the provided x and y coordinates.
 
-    Args:
-        history (list): A list of (x, y) coordinates.
-        city (str): The city name.
-
-    
-
-    Returns:
-        list: A list of suggestions.
-    """
-
-    # Placeholder for model integration, the model should return a list of suggestions in (x,y,category) format
-    # Convert predictions to a list of suggestions
     predictions = make_multiple_predictions(history, 5, city)
 
     suggestions = []
@@ -95,8 +80,8 @@ def get_suggestions(history , city):
             'x': prediction[0],
             'y': prediction[1],
             'category': category,
-            'distance': round(calculate_displacement(history[-1]['x'], history[-1]['y'], prediction[0], prediction[1]) / 2, 2)  # Calculate distance based on current location
+            'distance': round(calculate_displacement(history[-1]['x'], history[-1]['y'], prediction[0], prediction[1]) / 2, 2)
 }
             suggestions.append(suggestion)
 
-    return suggestions[:10] # Return 10 suggestions
+    return suggestions[:10]
